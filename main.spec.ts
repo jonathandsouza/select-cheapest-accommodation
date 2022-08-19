@@ -164,3 +164,47 @@ test('test case #9', () => {
 	expect(cost).toBe(-Infinity);
 
 });
+
+test('test case #9', () => {
+
+	const problem: IRoomCombinations = {
+		combinations: [['A', 'B', "C", "D", "E", 'F', 'G', 'H'],
+		['A', 'B', "C", "D", "E", 'F', 'G', 'H'],
+		['A', 'B', "C", "D", "E", 'F', 'G', 'H'],
+		['A', 'B', "C", "D", "E", 'F', 'G', 'H'],
+		['A', 'B', "C", "D", "E", 'F', 'G', 'H']],
+		allocations: { 'A': 100, 'B': 100, 'C': 100, 'D': 100, 'E': 100, 'F': 100, 'G': 100, 'H': 100 },
+		prices: { 'A': 100, 'B': 100, 'C': 100, 'D': 100, 'E': 100, 'F': 100, 'G': 100, 'H': 100 },
+	}
+
+	const result = main(problem);
+	const cost = sum(result, problem);
+
+	console.log('TEST CASE #8', result);
+
+	expect(result).toEqual(['A', 'A', 'A', 'A', 'A']);
+	expect(cost).toBe(500);
+
+});
+
+test('test case #10', () => {
+
+	const problem: IRoomCombinations = {
+		combinations: [['A', 'B', "C", "D", "E", 'F', 'G', 'H'],
+		['A', 'B', "C", "D", "E", 'F', 'G', 'H'],
+		['A', 'B', "C", "D", "E", 'F', 'G', 'H'],
+		['A', 'B', "C", "D", "E", 'F', 'G', 'H'],
+		['I', 'A', 'B', "C", "D", "E", 'F', 'G', 'H']],
+		allocations: { 'A': 100, 'B': 100, 'C': 100, 'D': 100, 'E': 100, 'F': 100, 'G': 100, 'H': 100, 'I': 100 },
+		prices: { 'A': 100, 'B': 100, 'C': 100, 'D': 100, 'E': 100, 'F': 100, 'G': 100, 'H': 100, 'I': 10 },
+	}
+
+	const result = main(problem);
+	const cost = sum(result, problem);
+
+	console.log('TEST CASE #8', result);
+
+	expect(result).toEqual(['A', 'A', 'A', 'A', 'I']);
+	expect(cost).toBe(410);
+
+});

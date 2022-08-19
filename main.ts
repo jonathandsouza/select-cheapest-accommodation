@@ -49,7 +49,7 @@ function solve(problem: IRoomCombinations) {
 
 		let totalPrice = tempSolution.map(acc => prices[acc]).reduce((a, b) => a + b);
 
-		if (totalPrice > min) {
+		if (totalPrice >= min) {
 			return solution;
 		}
 
@@ -62,6 +62,13 @@ function solve(problem: IRoomCombinations) {
 	return solution;
 }
 
+/*
+	Assumptions:
+	1. all accommodations should have prices.
+	2. all accommodations should have allocations.
+	3. The accommodation choices in each room should be ascending  order of price. (low to high) 
+
+*/
 function main(problem: IRoomCombinations) {
 
 	performance.solveCalled = 0;
