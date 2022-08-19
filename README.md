@@ -4,4 +4,5 @@ Select cheapest accommodations given multiple rooms with multiple rooms  &amp; a
 
 ## How to run? 
 `npm install`
+
 `npm run test`
