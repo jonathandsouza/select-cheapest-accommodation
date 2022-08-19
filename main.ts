@@ -5,7 +5,14 @@ export interface IRoomCombinations {
 	min?: number;
 }
 
+const performance = {
+	solveCalled: 0,
+}
+
 function solve(problem: IRoomCombinations) {
+
+	performance.solveCalled++;
+
 	const { allocations, prices, combinations, min = Infinity } = problem;
 
 	let availableAcc = combinations[0].filter(room => allocations[room] >= 1);
@@ -57,8 +64,10 @@ function solve(problem: IRoomCombinations) {
 
 function main(problem: IRoomCombinations) {
 
-	return solve(problem);
-
+	performance.solveCalled = 0;
+	const result = solve(problem);
+	console.log('performance:', performance);
+	return result;
 }
 
 export default main;
