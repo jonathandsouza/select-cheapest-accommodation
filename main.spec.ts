@@ -182,7 +182,7 @@ test('test case #10', () => {
 
 	console.log('TEST CASE #10', result);
 
-	expect(result).toEqual(['A', 'A', 'A', 'A', 'A'], cost);
+	expect(result).toEqual(['A', 'A', 'A', 'A', 'A']);
 	expect(cost).toBe(500);
 
 });
