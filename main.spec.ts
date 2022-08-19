@@ -104,7 +104,7 @@ test('test case #6', () => {
 	const result = main(problem);
 	const cost = sum(result, problem);
 
-	console.log('TEST CASE #6', result);
+	console.log('TEST CASE #6', result, cost);
 
 	expect(result).toEqual([]);
 	expect(cost).toBe(-Infinity);
@@ -122,7 +122,7 @@ test('test case #7', () => {
 	const result = main(problem);
 	const cost = sum(result, problem);
 
-	console.log('TEST CASE #7', result);
+	console.log('TEST CASE #7', result, cost);
 
 	expect(result).toEqual(['C', 'B', 'A']);
 	expect(cost).toBe(600);
@@ -140,7 +140,7 @@ test('test case #8', () => {
 	const result = main(problem);
 	const cost = sum(result, problem);
 
-	console.log('TEST CASE #8', result);
+	console.log('TEST CASE #8', result, cost);
 
 	expect(result).toEqual(['A', 'C', 'E', 'B', 'D']);
 	expect(cost).toBe(1500);
