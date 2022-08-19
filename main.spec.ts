@@ -129,7 +129,6 @@ test('test case #7', () => {
 
 });
 
-
 test('test case #8', () => {
 
 	const problem: IRoomCombinations = {
