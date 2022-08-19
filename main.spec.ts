@@ -165,7 +165,7 @@ test('test case #9', () => {
 
 });
 
-test('test case #9', () => {
+test('test case #10', () => {
 
 	const problem: IRoomCombinations = {
 		combinations: [['A', 'B', "C", "D", "E", 'F', 'G', 'H'],
@@ -180,14 +180,14 @@ test('test case #9', () => {
 	const result = main(problem);
 	const cost = sum(result, problem);
 
-	console.log('TEST CASE #8', result);
+	console.log('TEST CASE #10', result);
 
 	expect(result).toEqual(['A', 'A', 'A', 'A', 'A']);
 	expect(cost).toBe(500);
 
 });
 
-test('test case #10', () => {
+test('test case #11', () => {
 
 	const problem: IRoomCombinations = {
 		combinations: [['A', 'B', "C", "D", "E", 'F', 'G', 'H'],
@@ -202,7 +202,7 @@ test('test case #10', () => {
 	const result = main(problem);
 	const cost = sum(result, problem);
 
-	console.log('TEST CASE #8', result);
+	console.log('TEST CASE #11', result);
 
 	expect(result).toEqual(['A', 'A', 'A', 'A', 'I']);
 	expect(cost).toBe(410);
